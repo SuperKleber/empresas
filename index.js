@@ -11,7 +11,14 @@ const server = http.createServer((req, res) => {
   info
     .then(i => {
       //   console.log(i);
-      const json = JSON.stringify(i);
+      urls = [];
+      i.map(el => {
+        el.map(e => {
+          urls.push(e);
+        });
+      });
+
+      const json = JSON.stringify(urls);
       //   const json = i;
       return json;
     })
