@@ -83,15 +83,15 @@ const boliviaUrlsRecolector = urlsRegional => {
   });
 };
 const urlsRegional = [
-    "http://amarillas.bo/departamento/beni",
-    "http://amarillas.bo/departamento/pando",
-    "http://amarillas.bo/departamento/oruro",
-  "http://amarillas.bo/departamento/cochabamba"
-    "http://amarillas.bo/departamento/la-paz",
-    "http://amarillas.bo/departamento/potosi",
-    "http://amarillas.bo/departamento/santa-cruz"
-    "http://amarillas.bo/departamento/sucre",
-    "http://amarillas.bo/departamento/tarija"
+  "http://amarillas.bo/departamento/beni",
+  "http://amarillas.bo/departamento/pando",
+  "http://amarillas.bo/departamento/oruro",
+  "http://amarillas.bo/departamento/cochabamba",
+  "http://amarillas.bo/departamento/la-paz",
+  "http://amarillas.bo/departamento/potosi",
+  "http://amarillas.bo/departamento/santa-cruz",
+  "http://amarillas.bo/departamento/sucre",
+  "http://amarillas.bo/departamento/tarija"
 ];
 boliviaUrlsRecolector(urlsRegional);
 
