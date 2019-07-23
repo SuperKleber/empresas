@@ -1,3 +1,4 @@
+require("events").EventEmitter.defaultMaxListeners = 40000;
 const fs = require("fs");
 const rp = require("request-promise");
 const ch = require("cheerio");
