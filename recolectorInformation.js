@@ -1,4 +1,4 @@
-require("events").EventEmitter.defaultMaxListeners = 40000;
+require("events").EventEmitter.defaultMaxListeners = 77;
 const fs = require("fs");
 const rp = require("request-promise");
 const ch = require("cheerio");
@@ -50,7 +50,7 @@ let errors = 0;
 const intentosRecolector = async (url, intentos) => {
   return await recolectorInformation(url)
     .then(info => {
-      loader++;
+      // loader++;
       console.log(
         Math.round(((loader * 100) / bolivia.length) * 100) / 100 + "%"
       );
@@ -60,7 +60,7 @@ const intentosRecolector = async (url, intentos) => {
       if (intentos > 0) {
         intentosRecolector(url, intentos - 1);
       } else {
-        loader++;
+        // loader++;
         console.log(
           Math.round(((loader * 100) / bolivia.length) * 100) / 100 + "%"
         );
@@ -71,7 +71,7 @@ const intentosRecolector = async (url, intentos) => {
 };
 
 let allData = [];
-const limitHilos = bolivia.length;
+const limitHilos = 77;
 let loader = 0;
 let status = 0;
 function PassToPass(counter = 0, limit) {
@@ -119,7 +119,7 @@ function MultiPassToPass(hilos = limitHilos) {
       counter + passNum <= bolivia.length ? counter + passNum : bolivia.length;
   }
 }
-// MultiPassToPass();
+MultiPassToPass();
 const recolectorForce = async () => {
   const data = await Promise.all(
     bolivia.map(async url => {
@@ -134,4 +134,4 @@ const recolectorForce = async () => {
     console.log("Número de errores: " + errors);
   });
 };
-recolectorForce();
+// recolectorForce();
