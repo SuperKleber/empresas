@@ -49,12 +49,20 @@ let errors = 0;
 const intentosRecolector = async (url, intentos) => {
   return await recolectorInformation(url)
     .then(info => {
+      loader++;
+      console.log(
+        Math.round(((loader * 100) / bolivia.length) * 100) / 100 + "%"
+      );
       return info;
     })
     .catch(err => {
       if (intentos > 0) {
         intentosRecolector(url, intentos - 1);
       } else {
+        loader++;
+        console.log(
+          Math.round(((loader * 100) / bolivia.length) * 100) / 100 + "%"
+        );
         errors++;
         return {};
       }
@@ -62,7 +70,7 @@ const intentosRecolector = async (url, intentos) => {
 };
 
 let allData = [];
-const limitHilos = 77;
+const limitHilos = bolivia.length;
 let loader = 0;
 let status = 0;
 function PassToPass(counter = 0, limit) {
@@ -110,4 +118,19 @@ function MultiPassToPass(hilos = limitHilos) {
       counter + passNum <= bolivia.length ? counter + passNum : bolivia.length;
   }
 }
-MultiPassToPass();
+// MultiPassToPass();
+const recolectorForce = async () => {
+  const data = await Promise.all(
+    bolivia.length.map(async url => {
+      return await intentosRecolector(url, 100);
+    })
+  );
+  console.log(data);
+  const json = JSON.stringify(data);
+  fs.writeFile("./data/data.json", json, "utf8", err => {
+    if (err) throw err;
+    console.log("Toda la información guardada");
+    console.log("Número de errores: " + errors);
+  });
+};
+recolectorForce();
