@@ -121,7 +121,7 @@ function MultiPassToPass(hilos = limitHilos) {
 // MultiPassToPass();
 const recolectorForce = async () => {
   const data = await Promise.all(
-    bolivia.length.map(async url => {
+    bolivia.map(async url => {
       return await intentosRecolector(url, 100);
     })
   );
