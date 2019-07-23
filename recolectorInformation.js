@@ -88,7 +88,7 @@ function PassToPass(counter = 0, limit) {
     }
   } else {
     console.log("...");
-    intentosRecolector(bolivia[counter], 10)
+    intentosRecolector(bolivia[counter], 100)
       .then(info => {
         loader++;
         console.log(
@@ -119,7 +119,8 @@ function MultiPassToPass(hilos = limitHilos) {
       counter + passNum <= bolivia.length ? counter + passNum : bolivia.length;
   }
 }
-MultiPassToPass();
+// MultiPassToPass();
+PassToPass(0, bolivia.length);
 const recolectorForce = async () => {
   const data = await Promise.all(
     bolivia.map(async url => {
