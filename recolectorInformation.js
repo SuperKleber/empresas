@@ -58,6 +58,7 @@ const intentosRecolector = async (url, intentos) => {
     })
     .catch(err => {
       if (intentos > 0) {
+        console.log("intentando");
         intentosRecolector(url, intentos - 1);
       } else {
         // loader++;
@@ -118,7 +119,6 @@ function MultiPassToPass(hilos = limitHilos) {
   }
 }
 // MultiPassToPass();
-PassToPass(0, 50);
 const recolectorForce = async () => {
   const data = await Promise.all(
     bolivia.map(async url => {
@@ -134,3 +134,5 @@ const recolectorForce = async () => {
   });
 };
 // recolectorForce();
+
+PassToPass(0, 5);
