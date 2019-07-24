@@ -47,6 +47,7 @@ const recolectorInformation = async url => {
 
 console.log("Comenzando Proceso...");
 let errors = 0;
+let totalIntentos = 0;
 const intentosRecolector = async (url, intentos) => {
   return await recolectorInformation(url)
     .then(info => {
@@ -58,7 +59,7 @@ const intentosRecolector = async (url, intentos) => {
     })
     .catch(err => {
       if (intentos > 0) {
-        console.log("intentando");
+        totalIntentos++;
         intentosRecolector(url, intentos - 1);
       } else {
         // loader++;
@@ -85,6 +86,7 @@ function PassToPass(counter = 0, limit) {
       if (err) throw err;
       console.log("Toda la información guardada");
       console.log("Número de errores: " + errors);
+      console.log("Número de intentos: " + totalIntentos);
     });
     // }
   } else {
@@ -135,4 +137,4 @@ const recolectorForce = async () => {
 };
 // recolectorForce();
 
-PassToPass(0, 5);
+PassToPass(0, bolivia.length);
