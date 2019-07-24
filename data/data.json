@@ -1,33 +1,96 @@
 [
   {
-    "title": "Lic. Pitter Garcia C.",
-    "slogan": "Fisioterapeuta y Kinesiólogo",
-    "address": " Calle padre Perez esquina Fidel Oliva ( 1 cuadra del 2do anillo). ",
-    "phone": ["3287680", "75568957"],
-    "email": "",
-    "web": "",
-    "categories": ["Fisioterapia", "Kinesiología", "Fisioterapeutas"],
-    "socialNetwork": [
-      "https://www.facebook.com/fisioykines/?eid=ARCl2pf36pFuFvu1Diu2GYYHxZs-4KH2HhTmkOCwiIG5erFSL7axUDCQEL6ZAQMRCYJ12edp1ldEBMpV",
-      "https://www.facebook.com/Radiantmedic/?epa=SEARCH_BOX"
-    ]
-  },
-  {
-    "title": "Dra. Leticia Garcia C.",
-    "slogan": "Medico Dermatólogo",
-    "address": " Calle padre Perez esquina Fidel Oliva ( 1 cuadra del 2do anillo) ",
-    "phone": ["3287680", "75568957"],
+    "title": "LITORAL BERMEJO",
+    "slogan": "",
+    "address": " Calle Litoral N° S/n ",
+    "phone": ["6961546"],
     "email": "",
     "web": "",
     "categories": [
-      "Médicos dermatólogos",
-      "Dermatologia",
-      "Cirujano dermatologo",
-      "Médico"
+      "Aserrado, secado, tableado, descortezado y cepillado de madera"
     ],
-    "socialNetwork": [
-      "https://www.facebook.com/Dermatologiaclinic/?eid=ARCRVRctYEwCHHcXtUQsLQbuQG8AEYEwpOCtRqP4C7U47sWkYxJQiXSO2eIxImNAnkHXyZUWkbJZ95oM",
-      "https://www.facebook.com/Radiantmedic/?epa=SEARCH_BOX"
-    ]
+    "socialNetwork": []
+  },
+  {
+    "title": "INDUSTRIAS ALIMENTICIAS REINA MADRE S.R.L.",
+    "slogan": "",
+    "address": " Camatinde N° 2921 ",
+    "phone": [],
+    "email": "",
+    "web": "",
+    "categories": ["Elaboración de vinos"],
+    "socialNetwork": []
+  },
+  {
+    "title": "INDUSTRIAS AGRICOLAS DE BERMEJO SOCIEDAD ANONIMA - ( IABSA )",
+    "slogan": "",
+    "address": " Carretera A Yacuiba, Km 7 Zona Arrozales-bermejo N° S/n ",
+    "phone": ["69-64003"],
+    "email": "",
+    "web": "",
+    "categories": ["Elaboración de azúcar"],
+    "socialNetwork": []
+  },
+  {
+    "title": "LIDIA ATAHUICHI MAMANI",
+    "slogan": "",
+    "address": " Calle San Pedro N° S/n ",
+    "phone": ["73454266"],
+    "email": "",
+    "web": "",
+    "categories": ["Fabricación de prendas de vestir, excepto prendas de piel"],
+    "socialNetwork": []
+  },
+  {
+    "title": "INDUSTRIAL DEL FRIO RAMIREZ",
+    "slogan": "",
+    "address": " Av.circunvalacion N° S/n ",
+    "phone": ["6667654"],
+    "email": "",
+    "web": "",
+    "categories": [
+      "Reparación de maquinaria minera, industrial y de uso agropecuario"
+    ],
+    "socialNetwork": []
+  },
+  {
+    "title": "JUAN VALDEZ VALDEZ",
+    "slogan": "",
+    "address": " Av. Marcelo Quiroga Santa Cruz N° S/n ",
+    "phone": ["6649332"],
+    "email": "",
+    "web": "",
+    "categories": ["Fabricación de sustancias químicas básicas"],
+    "socialNetwork": []
+  },
+  {
+    "title": "INDUSTRIAL COMERCIAL JEREZ",
+    "slogan": "",
+    "address": " Bolivar N° 479 ",
+    "phone": ["66-35039"],
+    "email": "",
+    "web": "",
+    "categories": ["Otras industrias manufactureras n.c.p."],
+    "socialNetwork": []
+  },
+  {
+    "title": "JORGE ALVARO GAMARRA ARACENA",
+    "slogan": "",
+    "address": " Junin B/ 14 Viviendas N° 1164 ",
+    "phone": ["6666259"],
+    "email": "",
+    "web": "",
+    "categories": ["Fabricación de prendas de vestir, excepto prendas de piel"],
+    "socialNetwork": []
+  },
+  {
+    "title": "J.A.M.E.",
+    "slogan": "",
+    "address": " Calle Ayacucho N° 528 ",
+    "phone": ["66-54824"],
+    "email": "",
+    "web": "",
+    "categories": ["Fabricación de otros tipos de maquinaria de uso general"],
+    "socialNetwork": []
   }
 ]
