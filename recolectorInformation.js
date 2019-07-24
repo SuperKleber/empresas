@@ -118,7 +118,7 @@ function MultiPassToPass(hilos = limitHilos) {
   }
 }
 // MultiPassToPass();
-PassToPass(0, 1000);
+PassToPass(0, 500);
 const recolectorForce = async () => {
   const data = await Promise.all(
     bolivia.map(async url => {
