@@ -2,7 +2,7 @@ require("events").EventEmitter.defaultMaxListeners = 999999;
 const fs = require("fs");
 const rp = require("request-promise");
 const ch = require("cheerio");
-const bolivia = require("./departamentos/santa-cruz.json");
+const bolivia = require("./departamentos/bolivia.json");
 const puppeteer = require("puppeteer");
 const recolectorInformation = async url => {
   const browser = await puppeteer.launch(url);
@@ -129,7 +129,7 @@ const recolectorForce = async urls => {
   );
   console.log(data);
   const json = JSON.stringify(data);
-  fs.writeFile("./data/data.json", json, "utf8", err => {
+  fs.writeFile("./data/bolivia-data.json", json, "utf8", err => {
     if (err) throw err;
     console.log("Toda la información guardada");
     console.log("Número de errores: " + errors);
