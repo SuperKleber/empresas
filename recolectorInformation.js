@@ -76,16 +76,16 @@ let loader = 0;
 let status = 0;
 function PassToPass(counter = 0, limit) {
   if (counter >= limit) {
-    status++;
-    if (status == limitHilos) {
-      console.log("El ciclo ha terminado");
-      const json = JSON.stringify(allData);
-      fs.writeFile("./data/data.json", json, "utf8", err => {
-        if (err) throw err;
-        console.log("Toda la información guardada");
-        console.log("Número de errores: " + errors);
-      });
-    }
+    // status++;
+    // if (status == limitHilos) {
+    console.log("El ciclo ha terminado");
+    const json = JSON.stringify(allData);
+    fs.writeFile("./data/data.json", json, "utf8", err => {
+      if (err) throw err;
+      console.log("Toda la información guardada");
+      console.log("Número de errores: " + errors);
+    });
+    // }
   } else {
     console.log("...");
     intentosRecolector(bolivia[counter], 100)
