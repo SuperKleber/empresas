@@ -73,12 +73,13 @@ const intentosRecolector = async (url, intentos) => {
 };
 
 let allData = [];
-const limitHilos = 2;
+const limitHilos = 1000;
 let loader = 0;
 let status = 0;
 function PassToPass(counter = 0, limit, urls) {
   if (counter >= limit) {
-    if (loader >= urls.length) {
+    status++;
+    if (status == limitHilos) {
       console.log("El ciclo ha terminado");
       const json = JSON.stringify(allData);
       fs.writeFile("./data/data.json", json, "utf8", err => {
