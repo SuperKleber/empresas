@@ -91,9 +91,7 @@ function PassToPass(counter = 0, limit) {
     intentosRecolector(bolivia[counter], 100)
       .then(info => {
         loader++;
-        console.log(
-          Math.round(((loader * 100) / bolivia.length) * 100) / 100 + "%"
-        );
+        console.log(Math.round(((loader * 100) / limit) * 100) / 100 + "%");
         console.log(
           "Éxito: " + bolivia[counter].split("http://amarillas.bo/empresa")[1]
         );
