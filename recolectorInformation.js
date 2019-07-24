@@ -150,5 +150,5 @@ const recolectorForce = async urls => {
 //   "http://amarillas.bo/empresa/litoral-bermejo",
 //   "http://amarillas.bo/empresa/lidia-atahuichi-mamani"
 // ];
-MultiPassToPass(50, bolivia);
+MultiPassToPass(10, bolivia);
 // PassToPass(0, 2, arrayc);
