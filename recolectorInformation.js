@@ -117,8 +117,12 @@ function MultiPassToPass(hilos = limitHilos, urls) {
   let limit = passNum;
   for (let i = 0; i < hilos; i++) {
     PassToPass(counter, limit, urls);
-    counter = counter + limit;
+    console.log("----");
+    console.log(i, counter, limit);
+    counter = counter + passNum;
     limit = counter + passNum <= urls.length ? counter + passNum : urls.length;
+    console.log(i, counter, limit);
+    console.log("----");
   }
 }
 const recolectorForce = async urls => {
@@ -135,10 +139,20 @@ const recolectorForce = async urls => {
     console.log("Número de errores: " + errors);
   });
 };
-recolectorForce();
-// MultiPassToPass(1000, bolivia);
+// recolectorForce();
 // const arrayc = [
+//   "http://amarillas.bo/empresa/litoral-bermejo",
+//   "http://amarillas.bo/empresa/lidia-atahuichi-mamani",
+//   "http://amarillas.bo/empresa/litoral-bermejo",
+//   "http://amarillas.bo/empresa/lidia-atahuichi-mamani",
+//   "http://amarillas.bo/empresa/litoral-bermejo",
+//   "http://amarillas.bo/empresa/lidia-atahuichi-mamani",
+//   "http://amarillas.bo/empresa/litoral-bermejo",
+//   "http://amarillas.bo/empresa/lidia-atahuichi-mamani",
+//   "http://amarillas.bo/empresa/litoral-bermejo",
+//   "http://amarillas.bo/empresa/lidia-atahuichi-mamani",
 //   "http://amarillas.bo/empresa/litoral-bermejo",
 //   "http://amarillas.bo/empresa/lidia-atahuichi-mamani"
 // ];
+MultiPassToPass(1000, bolivia);
 // PassToPass(0, 2, arrayc);
