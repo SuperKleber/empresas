@@ -1,4 +1,4 @@
-require("events").EventEmitter.defaultMaxListeners = 77;
+require("events").EventEmitter.defaultMaxListeners = 999999;
 const fs = require("fs");
 const rp = require("request-promise");
 const ch = require("cheerio");
@@ -120,7 +120,7 @@ function MultiPassToPass(hilos = limitHilos) {
   }
 }
 // MultiPassToPass();
-PassToPass(0, bolivia.length);
+PassToPass(0, 1000);
 const recolectorForce = async () => {
   const data = await Promise.all(
     bolivia.map(async url => {
