@@ -117,12 +117,8 @@ function MultiPassToPass(hilos = limitHilos, urls) {
   let limit = passNum;
   for (let i = 0; i < hilos; i++) {
     PassToPass(counter, limit, urls);
-    console.log("----");
-    console.log(i, counter, limit);
     counter = counter + passNum;
     limit = counter + passNum <= urls.length ? counter + passNum : urls.length;
-    console.log(i, counter, limit);
-    console.log("----");
   }
 }
 const recolectorForce = async urls => {
@@ -154,5 +150,5 @@ const recolectorForce = async urls => {
 //   "http://amarillas.bo/empresa/litoral-bermejo",
 //   "http://amarillas.bo/empresa/lidia-atahuichi-mamani"
 // ];
-MultiPassToPass(1000, bolivia);
+MultiPassToPass(100, bolivia);
 // PassToPass(0, 2, arrayc);
